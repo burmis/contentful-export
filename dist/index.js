@@ -104,6 +104,8 @@ function runContentfulExport(params) {
       }, {
         title: "Writing data to file",
         task: ctx => {
+          console.log("logFilePath = ", options.logFilePath);
+          console.log("ctx.data = ", ctx.data);
           return _bfj.default.write(options.logFilePath, ctx.data, {
             circular: "ignore",
             space: 2
